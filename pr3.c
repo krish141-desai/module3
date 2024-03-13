@@ -1,9 +1,24 @@
-// WAP to Find Area And Circumference of Circle
-#include<stdio.h>
-int main(){
-	const PI=3.142;
-	int r;
-	float A;
-	A=(PI*r*r);
-	printf("area is %f",A);
+// WAP to check if the given year is a leap year or not
+
+#include <stdio.h>
+int main() {
+   int year;
+   printf("Enter a year: ");
+   scanf("%d", &year);
+   if (year % 400 == 0) {
+      printf("%d is a leap year.", year);
+   }
+
+   else if (year % 100 == 0) {
+      printf("%d is not a leap year.", year);
+   }
+  
+   else if (year % 4 == 0) {
+      printf("%d is a leap year.", year);
+   }
+  
+   else {
+      printf("%d is not a leap year.", year);
+   }
+
 }

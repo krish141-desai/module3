@@ -1,11 +1,32 @@
-// Find Area of Square formula : a = a2
+// WAP to make simple calculator (operation include Addition,
+// Subtraction,Multiplication, Division, modulo) using conditional
+// statement
 
 #include <stdio.h>
-int main(){
-    int side, area;
-    printf("Enter the side of the square: ");
-    scanf("%d", &side);
-    area = side * side;
-    printf("Area of the Square having side %d is: %d", side, area);
-    
+int main() {
+  char a;
+  double x, y;
+  printf("choose one (sum,sub,mlti,div): ");
+  scanf("%c", &a);
+  printf("Enter two values: ");
+  scanf("%lf %lf", &x, &y);
+
+  switch (a) {
+    case 'sum':
+      printf("%lf + %lf = %lf", x, y, x + y);
+      break;
+    case 'sub':
+      printf("%lf - %lf = %lf", x, y, x - y);
+      break;
+    case 'mlti':
+      printf("%lf * %lf = %lf", x, y, x * y);
+      break;
+    case 'div':
+      printf("%lf / %lf = %lf", x, y, x / y);
+      break;
+    default:
+      printf("Enter correct value");
+  }
+
 }
+

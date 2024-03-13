@@ -1,8 +1,17 @@
-// Find area of Triangle Formula : A = 1/2 × b × h
+// Find the Character Is Vowel or Not
+
 #include<stdio.h>
- int main(){
- 	int b=12,h=2;
- 	float A;
- 	A=(float)(b*h)/2;
- 	printf("%f",A);
- } 
+
+int main()
+{
+    char ch;
+    printf("Enter an Alphabet: ");
+    scanf("%c", &ch);
+    if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u')
+        printf("\nIt's a Vowel");
+    else if(ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U')
+        printf("\nIt's a Vowel");
+    else
+        printf("\nIt's a Consonant");
+
+}

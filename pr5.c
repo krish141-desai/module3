@@ -1,13 +1,15 @@
-// Find Area of Cube formula : a = 6a2
+// Check Number Is Positive or Negative
 
-#include <stdio.h>
+#include <stdio.h>   
+
 void main()
 {
-    float side, surfacearea, volume;
-    printf("Enter the length of a side \n");
-    scanf("%f", &side);
-    surfacearea = 6.0 * side * side;
-    volume = pow(side, 3);
-    printf("Surface area = %6.2f and Volume = %6.2f \n", surfacearea,
-     volume);
+    int num;   
+
+    printf("Input a number : ");   
+    scanf("%d", &num);   
+    if (num >= 0)   
+        printf("%d is a positive number \n", num);   
+    else
+        printf("%d is a negative number \n", num);   
 }

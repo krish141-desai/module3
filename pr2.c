@@ -1,19 +1,20 @@
-// Write a program to make Simple calculator (to make addition,
-// subtraction,multiplication, division and modulo)
+// Write a C program to read the value of an integer m and display the value of
+// n is 1 when m is larger than 0, 0 when m is 0 and -1 when m is less than 0
 
-#include<stdio.h>
-main(){
-int a=12;
-int b=10;
-int add=a+b;
-printf("add of a&b is %d",add);
-int sub=a-b;
-printf("\nsub of a&b is %d",sub);
-int mul=a*b;
-printf("\nmul of a&b is %d",mul);
-int div=a/b;
-printf("\ndiv of a&b is %d",div);
-int mod=a%b;
-printf("\nmod of a&b is %d",mod);
-	
+
+#include <stdio.h>  
+void main()
+{
+   int m,n;  
+   printf("Input the  value of m :");   
+   scanf("%d",&m);  
+     if(m>0){
+       n=1;  
+       }
+     else if(m==0){
+       n=-1;  
+       }
+   else
+     n=0;  
+   printf("The value of n = %d \n",n);  
 }
