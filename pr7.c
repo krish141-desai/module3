@@ -1,14 +1,23 @@
-// Find area of Rectangle Formula : A=wl
+// WAP Find out length of string without using inbuilt function
 
 #include <stdio.h>
 int main()
 {
-    float length, width, area;
-    printf("Enter length of rectangle: ");
-    scanf("%f", &length);
-    printf("Enter width of rectangle: ");
-    scanf("%d", &width);
-    area = length * width;
-    printf("Area of rectangle = %f sq. units ", area);
+   //Initializing variable.
+    char str[100];
+    int i,length=0;
+    
+     //Accepting input.
+    printf("Enter a string: \n");
+    scanf("%s",str);
 
+     //Initializing for loop.
+    for(i=0; str[i]!='\0'; i++)
+    {
+        length++; //Counting the length.
+    }
+    
+    printf("\nLength of input string: %d",length);
+    
+     return 0;
 }

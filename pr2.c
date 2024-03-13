@@ -1,20 +1,38 @@
-// Write a C program to read the value of an integer m and display the value of
-// n is 1 when m is larger than 0, 0 when m is 0 and -1 when m is less than 0
-
+// WAP of Addition, Subtraction, Multiplication and Division using
+// Switchcase.(Must Be Menu Driven)
 
 #include <stdio.h>  
-void main()
-{
-   int m,n;  
-   printf("Input the  value of m :");   
-   scanf("%d",&m);  
-     if(m>0){
-       n=1;  
-       }
-     else if(m==0){
-       n=-1;  
-       }
-   else
-     n=0;  
-   printf("The value of n = %d \n",n);  
-}
+  
+int main()  
+{  
+    int a, b;  
+    char choice;  
+  
+    printf("Enter your choice\n");  
+    printf("a. Addition\nb. Subtraction\nc. Multiplication\nd. Division\n");  
+    scanf("%c", &choice);  
+   printf("Enter 2 integer numbers\n");  
+   scanf("%d %d", &a, &b);  
+    switch(choice)  
+    {  
+        case 'a': printf("%d + %d = %d\n", a, b, (a+b));  
+                break;  
+  
+        case 'b': printf("%d - %d = %d\n", a, b, (a-b));  
+                break;  
+  
+        case 'c': printf("%d x %d = %d\n", a, b, (a*b));  
+                break;  
+  
+        case 'd': if( b != 0)  
+                    printf("%d / %d = %d\n", a, b, (a/b));  
+                else  
+                    printf("Number can't be divided by 0\n");  
+                break;  
+  
+        default: printf("You entered wrong choice\n");  
+                 break;  
+    }  
+  
+
+}  

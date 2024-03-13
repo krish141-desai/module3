@@ -1,24 +1,22 @@
-// WAP to check if the given year is a leap year or not
+// WAP to find reverse of string using recursion
 
 #include <stdio.h>
-int main() {
-   int year;
-   printf("Enter a year: ");
-   scanf("%d", &year);
-   if (year % 400 == 0) {
-      printf("%d is a leap year.", year);
-   }
+#include <string.h>
 
-   else if (year % 100 == 0) {
-      printf("%d is not a leap year.", year);
-   }
-  
-   else if (year % 4 == 0) {
-      printf("%d is a leap year.", year);
-   }
-  
-   else {
-      printf("%d is not a leap year.", year);
-   }
 
+int main()
+{
+    char str[100]; 
+    int l=0;
+	
+       printf("\n\n Print individual characters of string in reverse order :\n");
+       printf("Input the string : ");
+       fgets(str, sizeof str, stdin);
+	   l=strlen(str);
+	   printf("The characters of the string in reverse are : \n");
+       for(str[l]='\0';l>=0;l--)
+        {
+          printf("%c  ", str[l]);
+        }
+    printf("\n");
 }
