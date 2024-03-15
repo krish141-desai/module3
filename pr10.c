@@ -1,24 +1,27 @@
-// Write a program you have to make a summation of first and last
-// Digit. (E.g.,
-// 1234 Ans: -5)
-
+// Write a program in C to extract a substring from a given string
 
 #include <stdio.h>
-int main()
-{
-    int n, sum=0, firstDigit, lastDigit;
-    printf("Enter number to find sum of first and last digit = ");
-    scanf("%d", &n);
-  
-    lastDigit = n % 10;
-    
-    while(n >= 10)
-    {
-        n = n / 10;
-    }
-    firstDigit = n;
+#include <string.h>
 
-    sum = firstDigit + lastDigit;
-    printf("Sum of first and last digit = %d", sum);
-    return 0;
+int main() {
+    char str[100], sstr[100]; 
+    int pos, l, c = 0; 
+    printf("\n\nExtract a substring from a given string:\n"); 
+    printf("Input the string : ");
+    fgets(str, sizeof str, stdin); 
+
+    printf("Input the position to start extraction :");
+    scanf("%d", &pos); 
+
+    printf("Input the length of substring :");
+    scanf("%d", &l); 
+
+    while (c < l) {
+        sstr[c] = str[pos + c - 1]; 
+        c++;
+    }
+    sstr[c] = '\0'; 
+    printf("The substring retrieved from the string is : \" %s\" \n\n", sstr);  
+	
+	return 0; 
 }

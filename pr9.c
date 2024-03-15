@@ -1,16 +1,41 @@
-// Write a program make a summation of given number (E.g., 1523 Ans: -
-// 11)
-#include<stdio.h>
+// Write a program in C to find the maximum number of characters in a string
+#include <stdio.h>
+#include <string.h>
 
-int main ()
-{
-    int num, sum = 0;
-    num = 1234;
-    printf("The number is = %d\n",num);
-    while(num!=0){
-        sum += num % 10;
-        num = num / 10;
+#define str_size 100 
+#define chr_no 255   
+
+int main() {
+    char str[str_size];  
+    int ch_fre[chr_no];  
+    int i = 0, max;      
+    int ascii;           
+
+    printf("\n\nFind maximum occurring character in a string :\n"); 
+    printf("Input the string : ");
+    fgets(str, sizeof str, stdin);  
+
+    for (i = 0; i < chr_no; i++) { 
+        ch_fre[i] = 0;
     }
-    printf("Sum: %d\n",sum);
 
+    i = 0;
+    while (str[i] != '\0') { 
+        ascii = (int)str[i]; 
+        ch_fre[ascii] += 1;  
+        i++;
+    }
+
+    max = 0; 
+    for (i = 0; i < chr_no; i++) {
+        if (i != 32) { 
+            if (ch_fre[i] > ch_fre[max]) {
+                max = i; 
+            }
+        }
+    }
+
+    printf("The Highest frequency of character '%c' appears number of times : %d \n\n", max, ch_fre[max]); 
+	
+	return 0; 
 }

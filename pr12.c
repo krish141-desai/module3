@@ -1,34 +1,27 @@
-// Program of Armstrong Number in C Using For Loop & While 
-// Loop
+// Write a program in C to find the number of times a given word 'is' 
+// appears inthe given string.
 
 #include <stdio.h>
-#include <stdbool.h>
-
-bool isArmstrong(int num) {
-    int originalNum = num;
-    int sum = 0;
-    int digitCount = 0;
-    while (num != 0) {
-        num /= 10;
-        digitCount++;
-    }
-    num = originalNum;
-    while (num != 0) {
-        int digit = num % 10;
-        sum += pow(digit, digitCount);
-        num /= 10;
-    }
-    return (sum == originalNum);
-}
+#include <string.h>
 
 int main() {
-    int num;
-    printf("Enter a number: ");
-    scanf("%d", &num);
+    int ctr = 0, i, freq = 0; 
+    int t, h; 
+    char str[100]; 
+    printf("\n\nFind the number of times the word 'is ' in any combination appears :\n"); 
+    printf("Input the string : ");
+    fgets(str, sizeof str, stdin); 
 
-    if (isArmstrong(num)) {
-        printf("%d is an Armstrong number.\n", num);
-    } else {
-        printf("%d is not an Armstrong number.\n", num);
+    ctr = strlen(str); 
+
+    for (i = 0; i <= ctr - 3; i++) {
+        t = (str[i] == 'i' || str[i] == 'I');
+        h = (str[i + 1] == 's' || str[i + 1] == 'S');
+        
+        if ((t && h) == 1)
+            freq++;
     }
+
+    printf("The frequency of the word \'is\' is : %d\n\n", freq); 
+	
 }

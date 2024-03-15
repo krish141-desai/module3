@@ -1,17 +1,13 @@
-// WAP to accept 5 numbers from user and display all numbers
-
+// /Write a program in C to separate individual characters from a string.
 #include<stdio.h>
+#include<string.h>
 int main()
 {
- int i=0, number[5];
- for(i=0; i<5; i++) 
- {
-  printf("Enter your Number[%d]:",i);
-  scanf("%d",&number[i]);
- }
+    int i ;
+    char string[]="avadhi";
+    printf("individual characters from given string:\n");
+    for(i=0;i<strlen(string);i++){
+        printf("%c",string[i]);
+    }
 
- for(i=0; i<5; i++)
- {
-  printf("Number[%d]:%d \n", i, number[i]);
- }
 }

@@ -1,17 +1,28 @@
-// calculate the Factorial of a Given Number using while loop
-
+// Write a program in C to remove characters from a string except 
+// alphabets
 #include <stdio.h>
-int main()
-{
-    int n,i,f;
-    f=i=1;
-    printf("Enter a Number to Find Factorial: ");
-    scanf("%d",&n);
-    while(i<=n)
-    {
-        f*=i;
-        i++;
+#include <string.h>
+
+int main() {
+    char str[150]; 
+    int i, j; 
+
+    printf("\n\nRemove characters in String Except Alphabets :\n"); 
+    printf("Input the string : ");
+    fgets(str, sizeof str, stdin); 
+
+    for (i = 0; str[i] != '\0'; ++i) {
+        while (!((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z' || str[i] == '\0'))){
+            
+            for (j = i; str[j] != '\0'; ++j) 
+            {
+                str[j] = str[j + 1]; 
+            }
+            str[j] = '\0'; 
+        }
     }
-    printf("The Factorial of %d is : %d",n,f);
-    return 0;
+
+    printf("After removing the Output String : %s\n\n", str); 
+	
+	return 0;
 }

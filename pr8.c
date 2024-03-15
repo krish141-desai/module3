@@ -1,32 +1,37 @@
-//  Write a program to find out the max from given number (E.g., No: -
-// 1562Max number is 6)
+// Write a program in C to count the total number of vowels or consonants 
+// in astring.
 
+#include <stdio.h>
+#include <string.h>
 
-#include<stdio.h>
-void main()
-{
-      int a[5],i,max=0,min=0;
-   
-      printf("Enter Five Value :");
-      for(i=0;i<=4;i++)
-          {
-               scanf("%d",&a[i]);
-          }
-      for(i=0;i<=4;i++)
-          {
-              if(a[i]>max)
-               {
-                    max=a[i]; 
-                   
-               }
-              else
-               {
-                    min=a[i];
-                   
-               }
-                   
-           }
-                   
-                    printf("Maximum is : %d\n",max);
-                   
-} 
+#define str_size 100 
+
+int main() {
+    char str[str_size]; 
+    int i, len, vowel, cons;
+
+    printf("\n\nCount total number of vowel or consonant :\n"); 
+    printf("Input the string : ");
+    fgets(str, sizeof str, stdin); 
+
+    vowel = 0; 
+    cons = 0; 
+    len = strlen(str); 
+
+    for (i = 0; i < len; i++) {
+       
+        if (str[i] == 'a' || str[i] == 'e' || str[i] == 'i' || str[i] == 'o' || str[i] == 'u' || str[i] == 'A' || str[i] == 'E' || str[i] == 'I' || str[i] == 'O' || str[i] == 'U') 
+        {
+            vowel++; 
+        }
+        
+        else if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z'))
+         {
+            cons++; 
+        }
+    }
+
+    printf("\nThe total number of vowel in the string is : %d\n", vowel);
+    printf("The total number of consonant in the string is : %d\n\n", cons);
+	
+}

@@ -1,28 +1,25 @@
-// Accept 5 names from user at run time
+// Write a program in C to read a sentence and replace lowercase characters 
+// withuppercase and vice versa
+#include <stdio.h>
+#include <string.h>
 
-#include<stdio.h>
 int main()
-
 {
-char  cName[5][21]= {0};
-int x=0;
-int  iPick;
-printf("Enter the name of 5 people\n\n");
-for(x=0;x<=5;x++){
-printf("Enter name %d:", x+1);
-scanf("%s", cName[x]);
-printf("\n\nWould you like to add another name or view current names stored?\n");
-printf("1)\tAdd another name\n");
-printf("2)\tView names stored\n");
-scanf("%d", &iPick);
-switch(iPick){
-case 1:
-    break;
-case 2:
-    for(x=0;x<=5;x++){
-    printf("\nName %d is %s\n",x+1, cName[x]);
-        }
-}
-}
-return 0;
+    char str[100]; 
+    int ctr, ch, i; 
+    printf("\n\nReplace lowercase characters by uppercase and vice-versa :\n"); 
+    printf("Input the string : ");
+    fgets(str, sizeof str, stdin); 
+
+    i = strlen(str);
+    ctr = i; 
+    printf("\nThe given sentence is   : %s", str); 
+    printf("After Case changed the string  is: ");
+    for (i = 0; i < ctr; i++) {
+        ch = islower(str[i]) ? toupper(str[i]) : tolower(str[i]);
+        putchar(ch); 
+    }
+    printf("\n\n");
+	
+	return 0; 
 }

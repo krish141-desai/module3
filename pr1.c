@@ -1,12 +1,16 @@
-// WAP to print 972 to 897 using for loop
-
-#include <stdio.h>
-
-int main() {
-    
-    for (int i = 972; i >= 897; i--) {
-        printf("%d ", i);
+// Write a program in C to find the length of a string without using
+//libraryfunctions.
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+    char str1[50];
+    int i, l= 0;
+    printf("Enter a String:");
+    scanf("%s",str1);
+    for(i=0; str1[i]!='\0'; i++)
+    {
+        l++;
     }
-
-    return 0;
+    printf("Length of string  is : %d \n \n " ,str1,l);
 }
