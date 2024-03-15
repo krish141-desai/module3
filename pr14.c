@@ -1,16 +1,16 @@
-// WAP to find the largest of three numbers
-
+// Perform 2D matrix array
 #include <stdio.h>
-int main() {
 
-  double n1, n2, n3;
-
-  printf("Enter three different numbers: ");
-  scanf("%lf %lf %lf", &n1, &n2, &n3);
-  if (n1 >= n2 && n1 >= n3)
-    printf("%lf is the largest number.", n1);
-  if (n2 >= n1 && n2 >= n3)
-    printf("%lf is the largest number.", n2);
-  if (n3 >= n1 && n3 >= n2)
-    printf("%lf is the largest number.", n3);
+int main(void) {
+    int arr[2][3] = {{31, 12, 11}, {81, 91, 110}};
+    int *p[2];
+    p[0] = arr[0]; 
+    p[1] = arr[1]; 
+    for (int i = 0; i < 2; i++) {
+        for (int j = 0; j < 3; j++) {
+            printf("%d ", p[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
 }

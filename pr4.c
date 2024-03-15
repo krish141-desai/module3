@@ -1,32 +1,19 @@
-// WAP to make simple calculator (operation include Addition,
-// Subtraction,Multiplication, Division, modulo) using conditional
-// statement
+// WAP to find factorial using recursion
 
-#include <stdio.h>
+
+#include<stdio.h>
+long int mn(int n);
 int main() {
-  char a;
-  double x, y;
-  printf("choose one (sum,sub,mlti,div): ");
-  scanf("%c", &a);
-  printf("Enter two values: ");
-  scanf("%lf %lf", &x, &y);
-
-  switch (a) {
-    case 'sum':
-      printf("%lf + %lf = %lf", x, y, x + y);
-      break;
-    case 'sub':
-      printf("%lf - %lf = %lf", x, y, x - y);
-      break;
-    case 'mlti':
-      printf("%lf * %lf = %lf", x, y, x * y);
-      break;
-    case 'div':
-      printf("%lf / %lf = %lf", x, y, x / y);
-      break;
-    default:
-      printf("Enter correct value");
-  }
-
+    int n;
+    printf("Enter a positive integer: ");
+    scanf("%d",&n);
+    printf("Factorial of %d = %ld", n, mn(n));
+    return 0;
 }
 
+long int mn(int n) {
+    if (n>=1)
+        return n*mn(n-1);
+    else
+        return 1;
+}

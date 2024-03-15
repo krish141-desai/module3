@@ -1,15 +1,25 @@
-// Write a C program to accept two integers and check whether they are equal
-// or not
+//  Write a program to find out the max number from given array using 
+// function
 
-#include <stdio.h>  
-
+#include <stdio.h>
+#include <conio.h>
+max(int [],int);
 void main()
 {
-    int int1, int2; 
-    printf("Input the values for Number1 and Number2 : ");   
-    scanf("%d %d", &int1, &int2);   
-    if (int1 == int2)  
-        printf("Number1 and Number2 are equal\n");   
-    else
-        printf("Number1 and Number2 are not equal\n");   
+	int a[]={10,5,45,12,19};
+	int n=5,m;
+	m=max(a,n);
+	printf("\n Maximum number is: %d",m);
+	
+}
+max(int x[],int k)
+{
+	int t,i;
+	t=x[0];
+	for(i=1;i<k;i++)
+        {
+		if(x[i]>t)
+			t=x[i];
+	}
+	return(t);
 }

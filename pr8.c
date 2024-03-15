@@ -1,19 +1,39 @@
-//  WAP to accept the height of a person in centimeters and categorize the
-// person according to their height
+/*Write a program of structure employee that provides the following 
+a. information -print and display empno, empname, address 
+andage */
+#include <stdio.h>
 
-#include <stdio.h>   
-void main()
-{
-    float h;   
+struct Employee {
+    int empno;
+    char empname[50];
+    char address[100];
+    int age;
+};
 
-    printf("Input the height of the person (in centimetres) :");   
-    scanf("%f", &h);   
-    if (h < 150.0)   
-        printf("The person is short heighted \n");   
-    else if ((h >= 150.0) && (h < 165.0))   
-        printf("The person is  average heighted. \n");   
-    else if ((h >= 165.0) && (h <= 195.0))   
-        printf("The person is taller. \n");   
-    else
-        printf("over heighted\n");   
+void displayEmployee(struct Employee emp) {
+    printf("Employee Number: %d\n", emp.empno);
+    printf("Employee Name: %s\n", emp.empname);
+    printf("Employee Address: %s\n", emp.address);
+    printf("Employee Age: %d\n", emp.age);
+}
+
+int main() {
+    struct Employee emp;
+
+    printf("Enter employee number: ");
+    scanf("%d", &emp.empno);
+
+    printf("Enter employee name: ");
+    scanf("%s", emp.empname);
+
+    printf("Enter employee address: ");
+    scanf("%s", emp.address);
+
+    printf("Enter employee age: ");
+    scanf("%d", &emp.age);
+
+    printf("\nEmployee Information:\n");
+    displayEmployee(emp);
+
+    return 0;
 }

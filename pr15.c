@@ -1,35 +1,36 @@
-/*Write a C program to determine eligibility for admission to a professional 
-course based on the following criteria 
-Eligibility Criteria : Marks in Maths >=65 and Marks in Phy >=55 and Marks 
-in Chem>=50 and Total in all three subject >=190 or Total in Maths and 
-Physics >=140 -------------------------------------- Input the marks obtained in 
-Physics :65 Input the marks obtained in Chemistry :51 Input the marks 
-obtained in Mathematics :72 Total marks of Maths, Physics and Chemistry : 
-188 Total marks of Maths and Physics : 137 The candidate is not eligible.*/
+// Store 5 numbers in array and sort it in ascending 
+// order
 
-#include<stdio.h>
-int main(){
-    int maths,phy,chem,total;
-    int total1;
-
-    printf("enter value of maths : ");
-    scanf("%d",&maths);
-
-    printf("enter value of phy : ");
-    scanf("%d",&phy);
-
-    printf("enter value of chem : ");
-    scanf("%d",&chem);
-    total=maths+phy+chem;
-    total1=maths+phy;
-    printf("total of 3 sub %d \n ",total);
-    printf("total of mat and phy is : %d \n",total1);
-
-    if(maths>=65 && phy>=55 && chem>=50 && total>=190 || total1>=140 ){
-        printf("eligible for course ..");
-
-    }
-    else{
-        printf("not eligeble..");
-    }
-}
+#include <stdio.h>    
+     
+int main()    
+{    
+      
+    int arr[] = {5, 2, 8, 7, 1};     
+    int temp = 0;    
+ 
+    int length = sizeof(arr)/sizeof(arr[0]);    
+          
+    printf("Elements of original array: \n");    
+    for (int i = 0; i < length; i++) {     
+        printf("%d ", arr[i]);     
+    }      
+        
+    for (int i = 0; i < length; i++) {     
+        for (int j = i+1; j < length; j++) {     
+           if(arr[i] > arr[j]) {    
+               temp = arr[i];    
+               arr[i] = arr[j];    
+               arr[j] = temp;    
+           }     
+        }     
+    }    
+        
+    printf("\n");    
+          
+    printf("Elements of array sorted in ascending order: \n");    
+    for (int i = 0; i < length; i++) {     
+        printf("%d ", arr[i]);    
+    }    
+     
+}     
