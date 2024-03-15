@@ -1,9 +1,16 @@
-// Find ascii value of given number
+// WAP to find the largest of three numbers
 
 #include <stdio.h>
-int main() {  
-    int n;
-    printf("Enter a Number: ");
-    scanf("%d", &n);  
-    printf("ASCII value of %d = %d", n);  
+int main() {
+
+  double n1, n2, n3;
+
+  printf("Enter three different numbers: ");
+  scanf("%lf %lf %lf", &n1, &n2, &n3);
+  if (n1 >= n2 && n1 >= n3)
+    printf("%lf is the largest number.", n1);
+  if (n2 >= n1 && n2 >= n3)
+    printf("%lf is the largest number.", n2);
+  if (n3 >= n1 && n3 >= n2)
+    printf("%lf is the largest number.", n3);
 }

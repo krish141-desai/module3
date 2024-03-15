@@ -1,53 +1,15 @@
-// WAP to take two Array input from user and sort them in
-// ascending ordescending order as per user’s choice
+// Check Number Is Positive or Negative
 
-#include <stdio.h>              
-#include<conio.h>
+#include <stdio.h>   
 
-
-int main()                       
+void main()
 {
-	int a[100],n,i,j;
-	printf("Array size: ");
-        scanf("%d",&n);
-        printf("Elements: ");
-        
-      for(i=0;i<n;i++)
-    {
-        scanf("%d",&a[i]);
-    }
-	for (int i = 0; i < n; i++)                    
-	{
-		for (int j = 0; j < n; j++)            
-		{
-			if (a[j] > a[i])                
-			{
-				int tmp = a[i];         
-				a[i] = a[j];            
-				a[j] = tmp;             
-			}  
-		}
-	}
-	printf("\n\nAscending : ");                    
-	for (int i = 0; i < n; i++)                     
-	{
-		printf(" %d ", a[i]);
-	}
-	for (int i = 0; i < n; i++)                   
-	{
-		for (int j = 0; j < n; j++)             
-		{
-			if (a[j] < a[i])            
-			{
-				int tmp = a[i];         
-				a[i] = a[j];          
-				a[j] = tmp;             
-			}
-		}
-	}
-	printf("\n\nDescending : ");                    
-	for (int i = 0; i < n; i++)                     
-	{
-		printf(" %d ", a[i]);               
-	}
+    int num;   
+
+    printf("Input a number : ");   
+    scanf("%d", &num);   
+    if (num >= 0)   
+        printf("%d is a positive number \n", num);   
+    else
+        printf("%d is a negative number \n", num);   
 }

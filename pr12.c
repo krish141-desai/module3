@@ -1,12 +1,16 @@
-// Accept number of students from user. I need to give 5 apples to each
-// student. How many apples are required?
+// WAP to find maximum number among 3 numbers using ternary 
+// operator
 
-#include <stdio.h>
-void main() {
-  int std, totalApple;
-  printf("Enter the student number :\n");
-  scanf("%d", & std);
-  totalApple = 5 * std;
-  printf("total appler are require :%d\n", totalApple);
-
+#include<stdio.h>
+void main()
+{
+	int a, b, c, larg;
+	printf("Enter first number: ");
+	scanf("%d", &a);
+	printf("Enter second number: ");
+	scanf("%d", &b);
+	printf("Enter third number: ");
+	scanf("%d", &c);
+	larg = (a>b)?((a>c)?a:c):((b>c)?b:c);
+	printf("Largest number is: %d", larg);
 }

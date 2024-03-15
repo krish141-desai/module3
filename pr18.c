@@ -1,28 +1,27 @@
-// Calculate person’s Annual salary
+// Write a C program to calculate profit and loss on a transaction.
 
+#include <stdio.h>  
 
-#include <stdio.h>
-int main()
-{
-    float basic, annual, da, hra; 
-    printf("Enter basic salary of an employee: ");
-    scanf("%f", &basic);
- 
-    if(basic <= 10000)
-    {
-        da  = basic * 0.8;
-        hra = basic * 0.2;
-    }
-    else if(basic <= 20000)
-    {
-        da  = basic * 0.9;
-        hra = basic * 0.25;
-    }
-    else
-    {
-        da  = basic * 0.95;
-        hra = basic * 0.3;
-    }
-    annual = basic + hra + da;
-    printf("ANNUAL SALARY OF EMPLOYEE = %f", annual);
-}
+void main()  
+{  
+    int cprice, sprice, plamt;  
+
+    printf("Input Cost Price: ");  
+    scanf("%d", &cprice);   
+    printf("Input Selling Price: ");  
+    scanf("%d", &sprice);  
+    if(sprice > cprice)  
+    {  
+        plamt = sprice - cprice;  
+        printf("\nYou can book your profit amount : %d\n", plamt);  
+    }  
+    else if(cprice > sprice)  
+    {  
+        plamt = cprice - sprice;  
+        printf("\nYou incurred a loss of amount : %d\n", plamt);  
+    }  
+    else  
+    {  
+        printf("\nYou are in a no profit, no loss condition.\n");  
+    }  
+}  

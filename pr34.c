@@ -1,18 +1,17 @@
-//  Write a program in C to read any Month Number in integer and display the
-// number of days for this month.
+// Accept month number and display month name
+
 
 #include <stdio.h>  
 void main()
 {
    int monno;  
-
    printf("Input Month No : ");  
    scanf("%d",&monno);  
 
    switch(monno)  
    {
 	case 1:
-	       printf("January\n"); 
+	       printf("January\n");  
 	       break;
 	case 2:
 	       printf("February\n");  
@@ -24,7 +23,7 @@ void main()
 	       printf("April\n");  
 	       break;
 	case 5:
-	       printf("May\n"); 
+	       printf("May\n");  
 	       break;
 	case 6:
 	       printf("June\n");  
@@ -36,16 +35,16 @@ void main()
 	       printf("August\n");  
 	       break;
 	case 9:
-	       printf("September\n");  
+	       printf("September\n"); 
 	       break;
 	case 10:
 	       printf("October\n");  
 	       break;
 	case 11:
-	       printf("November\n"); 
+	       printf("November\n");  
 	       break;
 	case 12:
-	       printf("December\n"); 
+	       printf("December\n");  
 	       break;
 	default:
 	       printf("Invalid Month number. \nPlease try again ....\n");  
