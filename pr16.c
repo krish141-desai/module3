@@ -1,14 +1,17 @@
-// Accept 5 numbers from user and perform 
-// sum of array 
+// Calculate the Sum of Natural Numbers Using the While Loop
 
-#include <stdio.h>    
-int main()    
-{       
-    int arr[] = {1, 2, 3, 4, 5};     
-    int sum = 0;      
-    int length = sizeof(arr)/sizeof(arr[0]);    
-    for (int i = 0; i < length; i++) {     
-       sum = sum + arr[i];    
-    }      
-    printf("Sum of all the elements of an array: %d", sum);      
-}    
+#include <stdio.h>
+int main() {
+    int n, i, sum = 0;
+
+    printf("Enter a positive integer: ");
+    scanf("%d", &n);
+
+    for (i = 1; i <= n; ++i) {
+        sum += i;
+    }
+
+    printf("Sum = %d", sum);
+    return 0;
+}
+

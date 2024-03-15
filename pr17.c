@@ -1,37 +1,35 @@
-// WAP to show difference between
-// Structure and Union
+// Calculate 5 numbers from user and calculate number of even and odd using
+// of while loop
 
-#include <stdio.h>
-
-struct Point {
-    int x;
-    int y;
-};
-
-
-union Value {
-    int intValue;
-    float floatValue;
-    char charValue;
-};
-
-int main() {
-    
-    struct Point pointStruct;
-    pointStruct.x = 10;
-    pointStruct.y = 20;
-
-    printf("Structure Example:\n");
-    printf("X coordinate: %d\n", pointStruct.x);
-    printf("Y coordinate: %d\n", pointStruct.y);
-    printf("Size of Structure: %lu bytes\n", sizeof(pointStruct));
-
-    union Value valueUnion;
-    valueUnion.intValue = 42;
-
-    printf("\nUnion Example:\n");
-    printf("Integer Value: %d\n", valueUnion.intValue);
-    printf("Size of Union: %lu bytes\n", sizeof(valueUnion));
-
+#include<stdio.h>
+int main()
+{
+  int i=1,n,even=0,odd=0;
+   printf("\nEnter the Ending value:");
+   scanf("%d",&n);
+   printf("\nEven numbers:");
+   while(i<=n)
+   {
+      if(i%2==0)
+      {
+        printf("\n%d",i);
+        even++;
+      }
+      i++;
    
+   }
+   printf("\nOdd numbers:");
+   i=1;
+   while(i<=n)
+   {
+     if(i%2==1)
+     {
+        printf("\n%d",i);
+        odd++;
+     }
+     i++;
+   }
+   printf("\nTotal even numbers:%d",even);
+   printf("\nTOtal odd numbers:%d",odd);
+  
 }

@@ -1,35 +1,28 @@
-// WAP to accept 5 numbers from user and display in reverse order
-// using forloop and array
+// Accept 5 names from user at run time
 
-
-#include <stdio.h>
-
+#include<stdio.h>
 int main()
+
 {
-   int i, n, a[100];
- 
-   printf("\n\nRead n number of values in an array and display it in reverse order:\n");
-   printf("Input the number of elements to store in the array :");
-   scanf("%d", &n);
-  
-   printf("Input %d number of elements in the array :\n", n);
-   for (i = 0; i < n; i++)
-   {
-      printf("element - %d : ", i);
-      scanf("%d", &a[i]);  
-   }
-  
-   printf("\nThe values stored in the array are : \n");
-   for (i = 0; i < n; i++)
-   {
-       printf("% 5d", a[i]);  
-   }
-   
-   printf("\n\nThe values stored in the array in reverse are :\n");
-   for (i = n - 1; i >= 0; i--)
-   {
-       printf("% 5d", a[i]);  
-   }
-   printf("\n\n");
-   
+char  cName[5][21]= {0};
+int x=0;
+int  iPick;
+printf("Enter the name of 5 people\n\n");
+for(x=0;x<=5;x++){
+printf("Enter name %d:", x+1);
+scanf("%s", cName[x]);
+printf("\n\nWould you like to add another name or view current names stored?\n");
+printf("1)\tAdd another name\n");
+printf("2)\tView names stored\n");
+scanf("%d", &iPick);
+switch(iPick){
+case 1:
+    break;
+case 2:
+    for(x=0;x<=5;x++){
+    printf("\nName %d is %s\n",x+1, cName[x]);
+        }
+}
+}
+return 0;
 }

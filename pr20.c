@@ -1,23 +1,23 @@
-// Accept monthly salary from the user and deduct 10% insurance premium,
-// 10% loan installment find out of remaining salary
+// WAP program to print below output using for loop
+// 01 02 03 04 05 06 07 08 09 10
+// 11 12 13 14 15 16 17 18 19 20
+// ..............
+// ..............
+// 41 42 43 44 45 46 47 48 49 50
+
+
 
 #include <stdio.h>
 
 int main() {
-    float monthlySalary, remainingSalary;
-    const float insurancePremiumRate = 0.10;
-    const float loanInstallmentRate = 0.10;
+    int i, j, k = 1;
 
-    printf("Enter your monthly salary: ");
-    scanf("%f", &monthlySalary);
+    for (i = 1; i <= 5; i++) {
+        for (j = 1; j <= 10; j++) {
+            printf("%02d ", k++);
+        }
+        printf("\n");
+    }
 
-    float insurancePremium = monthlySalary * insurancePremiumRate;
-    float loanInstallment = monthlySalary * loanInstallmentRate;
-    remainingSalary = monthlySalary - insurancePremium - loanInstallment;
-
-    printf("\nDeductions:\n");
-    printf("Insurance Premium (10%%): %.2f\n", insurancePremium);
-    printf("Loan Installment (10%%): %.2f\n", loanInstallment);
-    
-    printf("\nRemaining Salary: %.2f\n", remainingSalary);
+    return 0;
 }

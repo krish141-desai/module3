@@ -1,19 +1,15 @@
-// WAP to find factorial using recursion
+// WAP to print table up to given numbers
 
-
-#include<stdio.h>
-long int mn(int n);
-int main() {
-    int n;
-    printf("Enter a positive integer: ");
-    scanf("%d",&n);
-    printf("Factorial of %d = %ld", n, mn(n));
-    return 0;
-}
-
-long int mn(int n) {
-    if (n>=1)
-        return n*mn(n-1);
-    else
-        return 1;
-}
+#include <stdio.h>  
+int main()  
+{  
+    int num, i;  
+    printf (" Enter a number to generate the table in C: ");  
+    scanf (" %d", &num);        
+    printf ("\n Table of %d", num);  
+    for ( i = 1; i <= 10; i++)  
+    {  
+        printf ("\n %d * %d = %d", num, i, (num*i));  
+    }  
+   
+}  

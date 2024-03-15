@@ -1,23 +1,22 @@
-// WAP Find out length of string without using inbuilt function
+// WAP to print number in reverse order e.g.: number = 64728 ---> 
+// reverse =82746
 
 #include <stdio.h>
-int main()
-{
-   //Initializing variable.
-    char str[100];
-    int i,length=0;
-    
-     //Accepting input.
-    printf("Enter a string: \n");
-    scanf("%s",str);
 
-     //Initializing for loop.
-    for(i=0; str[i]!='\0'; i++)
-    {
-        length++; //Counting the length.
-    }
-    
-    printf("\nLength of input string: %d",length);
-    
-     return 0;
+int main() {
+
+  int n, reverse = 0, remainder;
+
+  printf("Enter an integer: ");
+  scanf("%d", &n);
+
+  while (n != 0) {
+    remainder = n % 10;
+    reverse = reverse * 10 + remainder;
+    n /= 10;
+  }
+
+  printf("Reversed number = %d", reverse);
+
+  return 0;
 }

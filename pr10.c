@@ -1,28 +1,24 @@
-// WAP to perform Palindrome number using for loop and function
+// Write a program you have to make a summation of first and last
+// Digit. (E.g.,
+// 1234 Ans: -5)
 
-#include<stdio.h>
-#include<conio.h>
-void main()
+
+#include <stdio.h>
+int main()
 {
-    int i,n,r,s=0;
-     
-    printf("\n Enter The Number:");
-    scanf("%d",&n);
-     
-    for(i=n;i>0; )
+    int n, sum=0, firstDigit, lastDigit;
+    printf("Enter number to find sum of first and last digit = ");
+    scanf("%d", &n);
+  
+    lastDigit = n % 10;
+    
+    while(n >= 10)
     {
-        r=i%10;
-        s=s*10+r;
-        i=i/10;
+        n = n / 10;
     }
-     
-    if(s==n)
-    {
-        printf("\n %d is a Palindrome Number",n);
-    }
-    else
-    {
-        printf("\n %d is not a Palindrome Number",n);
-    }
-    getch();
+    firstDigit = n;
+
+    sum = firstDigit + lastDigit;
+    printf("Sum of first and last digit = %d", sum);
+    return 0;
 }

@@ -1,16 +1,21 @@
-// Convert years into days and months
-
-#include <stdio.h>
-#define DAYSINWEEK 7
- 
-void main()
+// 1 2 3 6 9 18 27 54...
+#include<stdio.h>
+int main()
 {
-    int ndays, year, week, days;
-    printf("Enter the number of days\n");
-    scanf("%d", &ndays);
-    year = ndays / 365;
-    week =(ndays % 365) / DAYSINWEEK;
-    days =(ndays % 365) % DAYSINWEEK;
-    printf ("%d is equivalent to %d years, %d weeks and %d daysn",
-            ndays, year, week, days);
+    int a=1,b=2,i,n=10;
+    printf("%d %d ",a, b);
+    for(i=3;i<=n;i++)
+    {
+        if(i%2==1)
+        {
+            a=a*3;
+            printf("%d ",a);
+        }
+        else
+        {
+            b=b*3;
+            printf("%d ",b);
+        }
+    }
+   
 }

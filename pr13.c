@@ -1,25 +1,17 @@
-// WAP to accept 5 numbers from user and check entered number is even 
-// or oddusing of array
+// calculate the Factorial of a Given Number using while loop
 
 #include <stdio.h>
-
-int main() {
-    const int numNumbers = 5;
-    int numbers[numNumbers];
-    printf("Enter 5 numbers:\n");
-    for (int i = 0; i < numNumbers; i++) {
-        printf("Number %d: ", i + 1);
-        scanf("%d", &numbers[i]);
+int main()
+{
+    int n,i,f;
+    f=i=1;
+    printf("Enter a Number to Find Factorial: ");
+    scanf("%d",&n);
+    while(i<=n)
+    {
+        f*=i;
+        i++;
     }
-
-    printf("\nResults:\n");
-    for (int i = 0; i < numNumbers; i++) {
-        if (numbers[i] % 2 == 0) {
-            printf("%d is even.\n", numbers[i]);
-        } else {
-            printf("%d is odd.\n", numbers[i]);
-        }
-    }
-
+    printf("The Factorial of %d is : %d",n,f);
     return 0;
 }

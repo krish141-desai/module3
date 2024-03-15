@@ -1,27 +1,22 @@
-// Write a C program to calculate profit and loss on a transaction.
+// Write a C Program to Print the Multiplication Table of N
+// i. E.g. 5 * 1 = 5
+// ii. 5 * 2 = 10
+// 1. .
+// 2. .
+// iii. 5 * 10 = 50
 
-#include <stdio.h>  
 
-void main()  
-{  
-    int cprice, sprice, plamt;  
+#include <stdio.h>
 
-    printf("Input Cost Price: ");  
-    scanf("%d", &cprice);   
-    printf("Input Selling Price: ");  
-    scanf("%d", &sprice);  
-    if(sprice > cprice)  
-    {  
-        plamt = sprice - cprice;  
-        printf("\nYou can book your profit amount : %d\n", plamt);  
-    }  
-    else if(cprice > sprice)  
-    {  
-        plamt = cprice - sprice;  
-        printf("\nYou incurred a loss of amount : %d\n", plamt);  
-    }  
-    else  
-    {  
-        printf("\nYou are in a no profit, no loss condition.\n");  
-    }  
-}  
+int main()
+{
+    int i, num;
+    printf("Enter number to print table: ");
+    scanf("%d", &num);
+
+    for(i=1; i<=10; i++)
+    {
+        printf("%d * %d = %d\n", num, i, (num*i));
+    }
+
+}

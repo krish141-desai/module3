@@ -1,18 +1,34 @@
-// WAP to accept 5 students name and store it in array
+// Program of Armstrong Number in C Using For Loop & While 
+// Loop
+
 #include <stdio.h>
+#include <stdbool.h>
+
+bool isArmstrong(int num) {
+    int originalNum = num;
+    int sum = 0;
+    int digitCount = 0;
+    while (num != 0) {
+        num /= 10;
+        digitCount++;
+    }
+    num = originalNum;
+    while (num != 0) {
+        int digit = num % 10;
+        sum += pow(digit, digitCount);
+        num /= 10;
+    }
+    return (sum == originalNum);
+}
 
 int main() {
-    int a[5],r;
-    
-    for(r=0;r<5;r++)
-    {
-        printf("enter name");
-        scanf("%s",&a[r]);
-        
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (isArmstrong(num)) {
+        printf("%d is an Armstrong number.\n", num);
+    } else {
+        printf("%d is not an Armstrong number.\n", num);
     }
-    for(r=0;r<5;r++)
-    {
-        printf("%s\n",a[r]);
-    }
-    return 0;
 }

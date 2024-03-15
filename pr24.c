@@ -1,25 +1,16 @@
-// Accept 5 employees name and salary and count average and total 
-// salary
-
-#include <stdio.h>
+// 1 + 2 + 3 + 4 + 5 + ... + n
+#include<stdio.h>
 int main() {
-    char id[10];         
-    int hour;         
-    double value, salary; 
-    printf("Input the Employees ID: ");
-    scanf("%s", &id);
-     printf("Input the Employees ID: ");
-    scanf("%s", &id);
-     printf("Input the Employees ID: ");
-    scanf("%s", &id);
-     printf("Input the Employees ID: ");
-    scanf("%s", &id);
-     printf("Input the Employees ID: ");
-    scanf("%s", &id);
-    printf("\nInput the working hrs: ");
-    scanf("%d", &hour);
-    printf("\nSalary amount/hr: ");
-    scanf("%lf", &value);
-    salary = value * hour;
-    printf("\nEmployees ID = %s\nSalary = U$ %lf\n", id, salary);
+	int n,i;
+	int sum=0;
+	printf("Enter the n i.e. max values of series: ");
+	scanf("%d",&n);
+	sum = (n * (n + 1)) / 2;
+	printf("Sum of the series: ");
+	for (i =1;i <= n;i++) {
+		if (i!=n)
+		             printf("%d + ",i); else
+		             printf("%d = %d ",i,sum);
+	}
+	
 }

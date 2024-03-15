@@ -1,18 +1,21 @@
-// WAP to calculate swap 2 numbers with using of multiplication and
-// division
+// C Program to Reverse a Number Using FOR Loop
 
 #include<stdio.h>
-
+#include<conio.h>
 void main()
 {
-	int a, b;
-	printf("Enter the value of a and b\n");
-	scanf("%d %d", &a, &b);
-	printf("Values before swapping:\n");
-	printf("a:\t%d\nb:\t%d\n", a, b);
-	a = a * b;
-	b = a / b;
-	a = a / b;
-	printf("Values after swapping:\n");
-	printf("a:\t%d\nb:\t%d\n", a, b);
+    int i,n,r,s=0;
+   
+    printf("\n  Enter The Number:");
+    scanf("%d",&n);
+     
+    for(i=n;i>0; )
+    {
+        r=i%10;
+        s=s*10+r;
+        i=i/10;
+    }
+     
+    printf("\n  The Reverse Number of %d is %d",n,s);
+   
 }

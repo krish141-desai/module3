@@ -1,39 +1,32 @@
-/*Write a program of structure employee that provides the following 
-a. information -print and display empno, empname, address 
-andage */
-#include <stdio.h>
+//  Write a program to find out the max from given number (E.g., No: -
+// 1562Max number is 6)
 
-struct Employee {
-    int empno;
-    char empname[50];
-    char address[100];
-    int age;
-};
 
-void displayEmployee(struct Employee emp) {
-    printf("Employee Number: %d\n", emp.empno);
-    printf("Employee Name: %s\n", emp.empname);
-    printf("Employee Address: %s\n", emp.address);
-    printf("Employee Age: %d\n", emp.age);
-}
-
-int main() {
-    struct Employee emp;
-
-    printf("Enter employee number: ");
-    scanf("%d", &emp.empno);
-
-    printf("Enter employee name: ");
-    scanf("%s", emp.empname);
-
-    printf("Enter employee address: ");
-    scanf("%s", emp.address);
-
-    printf("Enter employee age: ");
-    scanf("%d", &emp.age);
-
-    printf("\nEmployee Information:\n");
-    displayEmployee(emp);
-
-    return 0;
-}
+#include<stdio.h>
+void main()
+{
+      int a[5],i,max=0,min=0;
+   
+      printf("Enter Five Value :");
+      for(i=0;i<=4;i++)
+          {
+               scanf("%d",&a[i]);
+          }
+      for(i=0;i<=4;i++)
+          {
+              if(a[i]>max)
+               {
+                    max=a[i]; 
+                   
+               }
+              else
+               {
+                    min=a[i];
+                   
+               }
+                   
+           }
+                   
+                    printf("Maximum is : %d\n",max);
+                   
+} 

@@ -1,16 +1,15 @@
-// Perform 2D matrix array
-#include <stdio.h>
+// Accept 5 numbers from user and find those numbers factorials
 
-int main(void) {
-    int arr[2][3] = {{31, 12, 11}, {81, 91, 110}};
-    int *p[2];
-    p[0] = arr[0]; 
-    p[1] = arr[1]; 
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 3; j++) {
-            printf("%d ", p[i][j]);
-        }
-        printf("\n");
-    }
-    return 0;
+#include <stdio.h>  
+
+int  main(){
+  int i, f = 1, num;  
+  printf("Input the number : ");  
+  scanf("%d", &num);  
+
+  for(i = 1; i <= num; i++) 
+      f = f * i;  
+
+  printf("The Factorial of %d is: %d\n", num, f);  
+   
 }

@@ -1,25 +1,12 @@
-//  Write a program to find out the max number from given array using 
-// function
+// WAP to print 972 to 897 using for loop
 
 #include <stdio.h>
-#include <conio.h>
-max(int [],int);
-void main()
-{
-	int a[]={10,5,45,12,19};
-	int n=5,m;
-	m=max(a,n);
-	printf("\n Maximum number is: %d",m);
-	
-}
-max(int x[],int k)
-{
-	int t,i;
-	t=x[0];
-	for(i=1;i<k;i++)
-        {
-		if(x[i]>t)
-			t=x[i];
-	}
-	return(t);
+
+int main() {
+    
+    for (int i = 972; i >= 897; i--) {
+        printf("%d ", i);
+    }
+
+    return 0;
 }
