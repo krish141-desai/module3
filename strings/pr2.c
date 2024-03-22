@@ -4,7 +4,7 @@
 int main()
 {
     int i ;
-    char string[]="avadhi";
+    char string[]="krish";
     printf("individual characters from given string:\n");
     for(i=0;i<strlen(string);i++){
         printf("%c",string[i]);
